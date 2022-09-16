@@ -67,4 +67,4 @@ Inferring from the zero-shot performance, the model seems to perform better on d
 
 # Training details
 
-`clip-mixer-4M` was trained on ~51Lk images with a batch size of `512`, while `clip-mixer-5M` was trained on ~57K images with a batch size of `384`.
+`clip-mixer-4M` was trained on ~51k images with a batch size of `512`, while `clip-mixer-5M` was trained on ~57K images with a batch size of `384`.
