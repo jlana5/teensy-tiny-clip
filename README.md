@@ -72,6 +72,7 @@ features = model.image_encoder(image) # shape (1, 384)
 
 Inferring from the zero-shot performance, the model seems to perform better on datasets with smaller number of classes and more distinct classes.
 
-# Training details
+# Model details
 
+Model was created through @lucidrains' [MLP-Mixer repo](https://github.com/lucidrains/mlp-mixer-pytorch).
 `clip-mixer-4M` was trained on ~51k images with a batch size of `512`, while `clip-mixer-5M` was trained on ~57K images with a batch size of `384`.
