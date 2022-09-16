@@ -50,7 +50,7 @@ images = torch.randn(3,3,224,224)
 text = ['Cat', 'A person flying a kite', 'River in a forest']
 encoded_text = encode_text(text, 'cpu')
 
-model(images, captions) # shape (3,3)
+model(images, encoded_text) # shape (3,3)
 
 ```
 
