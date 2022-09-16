@@ -25,7 +25,7 @@ To load the model:
 ```python
 import torch
 
-saved_model_path = '../input/teensytinyclip/4M/pytorch_model.bin'
+saved_model_path = 'clip-mixer-5M.bin'
 model = torch.jit.load(saved_model_path)
 ```
 
