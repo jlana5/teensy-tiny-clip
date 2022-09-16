@@ -55,9 +55,10 @@ model(images, encoded_text) # shape (3,3)
 
 ```
 
-You can also use the model for feature extraction:
-```
-features = model.image_encoder(images)
+You can also use the model for feature extraction. The model maps the image to a 384-dimensional vector:
+```python
+image = torch.randn(1,3,224,224)
+features = model.image_encoder(image) # shape (1, 384)
 ```
 
 # Zero-shot performance
