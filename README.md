@@ -4,7 +4,7 @@
 
 # Usage
 
-These are two 4 million and 5 million parameter [MLP-Mixer]([http://](https://arxiv.org/abs/2105.01601)) models trained on the [CLIP](https://arxiv.org/abs/2103.00020) objective on a very small subset of the [COCO 2017 dataset](https://arxiv.org/abs/1405.0312). The teensy-tiny CLIP model uses the `sentence-transformers/all-MiniLM-L6-v2` model for its text encoder, from the [`sentence-transformers`](https://www.sbert.net/) library. As such, you would need to install the `sentence-transformers` library.
+These are two 4 million and 5 million parameter [MLP-Mixer]([http://](https://arxiv.org/abs/2105.01601)) models trained on the [CLIP](https://arxiv.org/abs/2103.00020) objective on a very small subset of the [COCO 2017 dataset](https://arxiv.org/abs/1405.0312). The teensy-tiny CLIP model uses a pretrained `sentence-transformers/all-MiniLM-L6-v2` model for its text encoder, from the [`sentence-transformers`](https://www.sbert.net/) library. As such, you would need to install the `sentence-transformers` library.
 
 ```python
 !pip install sentence-transformers
