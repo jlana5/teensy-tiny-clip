@@ -27,6 +27,7 @@ import torch
 
 saved_model_path = 'clip-mixer-5M.bin'
 model = torch.jit.load(saved_model_path)
+model.eval()
 ```
 
 Resize and normalize the image first, as the model was trained on size 224 and normalized to ImageNet mean and std:
@@ -52,6 +53,11 @@ encoded_text = encode_text(text, 'cpu')
 
 model(images, encoded_text) # shape (3,3)
 
+```
+
+You can also use the model for feature extraction:
+```
+features = model.image_encoder(images)
 ```
 
 # Zero-shot performance
