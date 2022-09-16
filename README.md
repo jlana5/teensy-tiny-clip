@@ -7,7 +7,7 @@
 These are two 4 million and 5 million parameter [MLP-Mixer]([http://](https://arxiv.org/abs/2105.01601)) models trained on the [CLIP](https://arxiv.org/abs/2103.00020) objective on a very small subset of the [COCO 2017 dataset](https://arxiv.org/abs/1405.0312). The teensy-tiny CLIP model uses the `sentence-transformers/all-MiniLM-L6-v2` model for its text encoder, from the [`sentence-transformers`](https://www.sbert.net/) library. As such, you would need to install the `sentence-transformers` library.
 
 ```python
-!pip install sentence-transformers``
+!pip install sentence-transformers
 
 The model takes in an image-text_embedding pair, so I recommend the following function for encoding text:
 
@@ -58,9 +58,13 @@ model(images, captions) # shape (3,3)
 
 | | Model | CIFAR-10 | [ImageNette](https://github.com/fastai/imagenette) | [Natural Images](https://arxiv.org/abs/1807.10108) | CIFAR-100 | Caltech-256 |
 | --- | --- | --- | --- | --- | --- | --- |
-| Top-1 accuracy | clip-mixer-4M | 20.02% | 16.88% | 22.58% | 1.85% | 0.47% |
-| Top-5 accuracy | clip-mixer-4M | 73.11% | 59.35% | 81.19% | 7.86% | 3.39% |
-| Top-1 accuracy | clip-mixer-5M | 19.83% | 16.78% | 24.48% | 2.00% | 0.47% |
-| Top-5 accuracy | clip-mixer-5M | 71.96% | 59.68% | 79.66% | 7.83% | 3.37% |
+| Top-1 accuracy | `clip-mixer-4M` | 20.02% | 16.88% | 22.58% | 1.85% | 0.47% |
+| Top-5 accuracy | `clip-mixer-4M` | 73.11% | 59.35% | 81.19% | 7.86% | 3.39% |
+| Top-1 accuracy | `clip-mixer-5M` | 19.83% | 16.78% | 24.48% | 2.00% | 0.47% |
+| Top-5 accuracy | `clip-mixer-5M` | 71.96% | 59.68% | 79.66% | 7.83% | 3.37% |
 
 Inferring from the zero-shot performance, the model seems to perform better on datasets with smaller number of classes and more distinct classes.
+
+# Training details
+
+`clip-mixer-4M` was trained on ~51Lk images with a batch size of `512`, while `clip-mixer-5M` was trained on ~57K images with a batch size of `384`.
