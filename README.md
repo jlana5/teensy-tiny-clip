@@ -8,7 +8,7 @@ These are two 4 million and 5 million parameter [MLP-Mixer]([http://](https://ar
 
 ```python
 !pip install sentence-transformers
-
+```
 The model takes in an image-text_embedding pair, so I recommend the following function for encoding text:
 
 ```python
